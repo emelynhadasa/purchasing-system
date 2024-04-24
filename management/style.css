@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #F5F5F5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444444;
+  padding: 15px 20px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav .sidebar-button {
+  padding: 2px 5px;
+  font-size: 20px;
+  margin-right: 1.2rem;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+nav .sidebar-button:hover {
+  background-color: #444444;
+  color: white;
+}
+
+.nav-brand p {
+  font-size: 1.5rem;
+}
+
+.nav-profile {
+  margin-left: auto;
+  font-size: 1rem;
+}
+
+.sidebar {
+  position: fixed;
+  top: 62px;
+  left: -250px;
+  height: 100%;
+  width: 250px;
+  background-color: #ffffff;
+  transition: all 0.3s;
+  z-index: 1001;
+}
+
+.sidebar.active {
+  left: 0;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.active + .content {
+  margin-left: 250px;
+}
+
+.sidebar .sidebar-header {
+  text-align: center;
+  padding: 15px 0;
+  color: black;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #368F9E;
+  color: white;
+}
+
+.sidebar ul li .logout {
+  color: red;
+}
+
+.content {
+  flex: 1;
+  transition: all 0.3s;
+  padding: 20px 50px;
+  margin-top: 20px;
+}
+
+.minicard {
+  display: inline-block;
+  text-align: center;
+  background-color: white;
+  transition: 0.2s;
+  width: 15rem;
+  margin: 0 1rem;
+  border-radius: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.minicard:hover {
+  background-color: #444444;
+  color: white;
+}
+
+.minicard-header {
+  padding: 20px 0;
+  font-size: 1.2rem;
+}
+
+.minicard-content {
+  padding: 20px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.card {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 2px;
+  color: black;
+  padding: 30px 50px;
+  text-align: left;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card h1 {
+  font-weight: 300;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  color: black;
+  border-radius: 20px;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: left;
+  font-weight: 200;
+}
+table tr:hover {
+  background-color: #4359d9;
+  color: white;
+}
+
+#modalAddSupplierBtn {
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  border-radius: 17px;
+  border: none;
+  background-color: #444444;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#modalAddSupplierBtn:hover {
+  background-color: #444444;
+  color: white;
+}
+
+#modalAddUserBtn {
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  border-radius: 17px;
+  border: none;
+  background-color: #444444;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#modalAddUserBtn:hover {
+  background-color: #444444;
+  color: white;
+}
+
+#modalAddItemBtn {
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 20px 0;
+  font-size: 0.9rem;
+  border-radius: 17px;
+  border: none;
+  background-color: #444444;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#modalAddItemBtn:hover {
+  background-color: #444444;
+  color: white;
+}
+
+.modal {
+  background-color: whitesmoke;
+  color: black;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Style modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 10% dari atas dan auto dari sisi kanan dan kiri */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Lebar konten modal */
+  border-radius: 5px; /* Sudut bulat untuk konten modal */
+}
+
+/* Tutup tombol (x) di sudut kanan atas */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style form dalam modal */
+form {
+  display: grid;
+}
+
+/* label {
+  font-weight: bold;
+} */
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+textarea,
+select {
+  width: 100%; /* Lebar penuh */
+  padding: 8px; /* Ruang di dalam input */
+  border-radius: 5px; /* Sudut bulat */
+  border: 1px solid #ccc; /* Border abu-abu */
+  box-sizing: border-box; /* Menghitung padding dan border dalam lebar total */
+}
+
+.submitBtn {
+  padding: 10px 20px; /* Ruang di dalam tombol */
+  background-color: #444444; /* Warna latar belakang */
+  color: white; /* Warna teks */
+  border: none; /* Tanpa border */
+  border-radius: 5px; /* Sudut bulat */
+  cursor: pointer; /* Pointer mouse */
+}
+
+.submitBtn:hover {
+  background-color: #444444; /* Warna latar belakang saat mouse di atas */
+}
+
+.editBtn {
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 20px 0;
+  border-radius: 15px;
+  border: none;
+  background-color: #444444;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.editBtn:hover {
+  background-color: #444444;
+  color: white;
+}
+
+.deleteBtn {
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 20px 0;
+  border-radius: 15px;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.deleteBtn:hover {
+  background-color: rgb(249, 68, 68);
+  color: white;
+}
+
+.buttonLink {
+  display: inline-block;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 20px 0;
+  border-radius: 17px;
+  border: none;
+  background-color: #444444;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.buttonLink:hover {
+  background-color: #444444;
+  color: white;
+}

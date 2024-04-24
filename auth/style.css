@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.container {
+  width: 600px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.container h1 {
+  font-weight: 100;
+}
+
+.card {
+  width: 400px;
+  margin: auto;
+  box-sizing: border-box;
+  margin-top: 50px;
+  padding: 30px 50px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card form #username,
+.card form #password,
+.card form #name {
+  display: inline-block;
+  width: 250px;
+  box-sizing: border-box;
+  font-size: 18px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  border: none;
+  transition: 0.5s;
+}
+
+.card form #username:hover,
+.card form #password:hover,
+.card form #name:hover {
+  border: 1px solid #368F9E;
+}
+
+.card form #LOGIN {
+  display: inline-block;
+  width: 250px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  font-size: 20x;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #444444;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card p {
+  font-size: 25px;
+}
+
+.card form #LOGIN:hover {
+  background-color: #368F9E;
+  color: white;
+}
+
+.card form #REGISTER {
+  display: inline-block;
+  width: 250px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  font-size: 20x;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #444444;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card form #REGISTER:hover {
+  background-color: #368F9E;
+  color: white;
+}
